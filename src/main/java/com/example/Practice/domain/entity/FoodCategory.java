@@ -13,7 +13,7 @@ public class FoodCategory extends AuditingTimeField {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Long id;
 
     @Column(nullable = false, length = 20)
     private String name;

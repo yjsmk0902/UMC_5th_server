@@ -16,7 +16,7 @@ public class Notice extends AuditingField {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Long id;
 
     //새로운 이벤트 수신 여부
     private Boolean isNewEventReception;

@@ -18,6 +18,10 @@ public class Member extends AuditingTimeField {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String email;
+
+    private String password;
+
     @Column(nullable = false, length = 20)
     private String username;
 
@@ -47,8 +51,15 @@ public class Member extends AuditingTimeField {
     //미션 달성 갯수(최대 10)
     private Integer successMission;
 
+    // JWT refreshToken
+    private String refreshToken;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "notice_id")
     private Notice notice;
+
+    public void updateRefreshToken(String refreshToken) {
+        this.refreshToken = refreshToken;
+    }
 
 }
